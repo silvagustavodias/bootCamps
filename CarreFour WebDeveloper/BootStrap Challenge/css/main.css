@@ -1,6 +1,8 @@
 :root{
     --logo:#068708;
     --preto: #141414;
+    --logo2: #08b30a;
+    --logo3: rgb(182, 252, 184);
 }
 
 *{
@@ -24,11 +26,14 @@ header .container{
 
 }
 
+
 .logo{
-    color:  var(--logo);
+    background: linear-gradient(90deg, var(--logo), var(--logo3));
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 40px;
-
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
 
 header nav a{
@@ -46,9 +51,13 @@ header nav a:hover{
 
 .filme-principal{
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/AbelFerreira.jpg');
-    height: 500px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/mini10.jpg');
+    background-repeat: no-repeat;
+    height: 500px 100%;
     background-size: cover;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
 
     display: flex;
     flex-direction: column;
@@ -58,12 +67,14 @@ header nav a:hover{
 
 .filme-principal .descricao{
     margin-bottom: 40px;
+    
 }
 
 .titulo{
     margin-top: 15%;
     font-size: 60px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 .botao{
@@ -74,7 +85,8 @@ header nav a:hover{
     margin-right: 15px;
     font-size: 12 px;
     cursor: pointer;
-    transition: .3s ease all;   
+    transition: .3s ease all;
+    align-items: center;  
 }
 
 .botao:hover{
@@ -85,4 +97,21 @@ header nav a:hover{
 
 .botao i{
     margin-right: 8px;
+}
+
+.container{
+    margin-left: 30px;
+}
+
+.filme-principal .container{
+    width: 60%;
+}
+
+.box-filme{
+    max-width: 100%;
+    width:  200px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    cursor:pointer;
 }
